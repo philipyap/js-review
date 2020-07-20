@@ -1,2 +1,2 @@
-# js-reviewa
+# js-review
 review of javascript

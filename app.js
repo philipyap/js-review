@@ -59,3 +59,29 @@ console.log(isKool);
 console.log(myFriends);
 console.log(dog);
 console.log(dog.food.two);
+
+
+function printFriends(array){
+    array.forEach(friend => { // or array.forEach(function(element){})
+        console.log(friend);
+    });
+}
+
+
+printFriends(friends);
+printFriends(tesla.foundingMembers);
+
+//standard fuction
+function addNumbers(num1, num2){
+    return num1 + num2;
+}
+
+//function expression
+const multiplyNumbers = function(num1, num2){
+    return num1 * num2;
+};
+
+//arrow function
+const subtractNumbers = (num1, num2) => {
+    return num1 - num2;
+};

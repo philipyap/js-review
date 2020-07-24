@@ -196,122 +196,153 @@
 
 //isInside
 
-function isInside(array,ele){
-    for (let i=0; i<array.length; i++){
-        if (array[i] === ele){
-            return true;
-        }
-    }
-    return false;
-}
-const array = ['taylor','rome','adam'];
-console.log(isInside(array,'rome'));
+// function isInside(array,ele){
+//     for (let i=0; i<array.length; i++){
+//         if (array[i] === ele){
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+// const array = ['taylor','rome','adam'];
+// console.log(isInside(array,'philip'));
 
 
-// reverseStr
+// // reverseStr
 
-function reverseString(str) {
-    // Step 1. Use the split() method to return a new array
-    var splitString = str.split(""); // var splitString = "hello".split("");
-    // ["h", "e", "l", "l", "o"]
-    // Step 2. Use the reverse() method to reverse the new created array
-    var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
-    // ["o", "l", "l", "e", "h"]
-    // Step 3. Use the join() method to join all elements of the array into a string
-    var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
-    // "olleh"
-    //Step 4. Return the reversed string
-    return joinArray; // "olleh"
-}
-console.log(reverseString("bootcamp"));
-console.log(reverseString("General Assembly"));
+// function reverseString(str) {
+    
+//     var splitString = str.split("");  
+    
+//     var reverseArray = splitString.reverse(); 
+    
+//     var joinArray = reverseArray.join(""); 
+    
+//     return joinArray; 
+// }
+// console.log(reverseString("bootcamp"));
+// console.log(reverseString("General Assembly"));
 
 
 // luckySeven
 
-let num = 7;
-function luckySeven(array){
-    var mul = 2;
-    for (let i = 0; i < array.length; i++){
-    
-        if(mul < 25){
-        mul *= array[i];
-        }
+
+// function luckySeven(max){
+// //     let num7 = [];
+// //     for (let i = 0; i < max; i++){
+// //         if(num7 === max){
+
+// //         num7 += 7;
         
-        return mul;
-        
-    }
-    return num;
-}
-console.log(luckySeven([num]));
+// //         }
+// //         return num7;
+// //     }
+
+//     let seven = [];
+//     for(let i = 7; i <= max; i+=7){
+//         console.log(i);
+//         seven.push(i);
+//     }
+
+//     return seven;
+
+// }  
+
+// console.log(luckySeven(25));
+// console.log([7,14,21]);
+// console.log(luckySeven(42));
+// console.log([7,14,21,28,35,42]);
 
 //copyMachine
 
-var foods = ['candy', 'candy']
-function copyMachine (element, num){
-    
-}
 
-console.log(foods.indexOf(copyMachine));
+// function copyMachine (element, num){
+//     let result = [];
+//     for(let i = 0; i < num; i++){
+//         result.push(element);
+//     }
+//     return result;
+// }
+
+// console.log((copyMachine('candy', 2)));
+// console.log(copyMachine('bread', 4));
 
 
-//everyword
+// //everyword
 
-var words =["hello how are you doing on this lovely day?"];
-const result = words.map(sentence =>{
-    let splitSentence = sentence.split(" ");
 
-    return splitSentence;
-});
+// function everyOtherWord(sentence){
 
-console.log(result);
+//     let result = [];
+//     let splitSentence = sentence.split(" ");
+
+//     for(let i = 0; i < splitSentence.length; i++){
+//         if (i%2 === 0){ // 2 / 0 = 0, thats why it starts from the first word
+//             result.push(splitSentence[i]); // =>  [hello, are, doing, this, day]
+//         }
+//     }
+
+//     return result;
+// };
+//                           //   0     1    2   3   4   5   6   7       8
+// console.log(everyOtherWord("hello how are you doing on this lovely day?"));
 
 //wordYeller
 
-// var words1 =[" hello how are you doing on this lovely day ? "];
-// const result1 = words1.map(sentence =>{
-    
+
+// function wordYeller(sentence){
+//     let result = [];
 //     let splitSentenceOne = sentence.split(" ");
     
 //     for( let i = 0; i < splitSentenceOne.length; i++){
 
 //         if(splitSentenceOne[i].indexOf('!') !==-1){
-//             //words1.push(splitSentenceOne[i]);
+            
 //         }
 //         else if(splitSentenceOne[i].indexOf('?') !==-1){
-//             words1.push(splitSentenceOne[i]);
+//             result.push(splitSentenceOne[i]);
 //         }
 //         else if(splitSentenceOne[i].indexOf(':') !==-1){
-//             words1.push(splitSentenceOne[i]);
+//             result.push(splitSentenceOne[i]);
 //         } 
 //         else if(splitSentenceOne[i].indexOf(',') !==-1){
-//             words1.push(splitSentenceOne[i]);
+//             sentence.push(splitSentenceOne[i]);
 //         }
 //         else if(splitSentenceOne[i].indexOf('.') !==-1){
-//             words1.push(splitSentenceOne[i]);
+//             result.push(splitSentenceOne[i]);
 //         }
 //         else if (splitSentenceOne[i].indexOf(';') !==-1){
-//             words1.push(splitSentenceOne[i]);
+//             result.push(splitSentenceOne[i]);
 //         }
 //         else {
-//             words1.push(words1[i] + "!");
+//             result.push(splitSentenceOne[i]);
 //         }    
-
-//         //splitSentenceOne = words1.join(" ");
+        
+//     return sentence = splitSentenceOne.join("!");
 //     }
-//     return splitSentenceOne;
-// })
+// }
+// console.log(wordYeller(" Stop it now! please, won't you stop? "));
 
-// console.log(result1);
+// Write a function `arraySubstring(words, str)` that takes in an array of
+// strings and a string as arguments and returns an array where each element is
+// replaced with true if the string is a substring of the element and false if
+// it is not.
 
-//
+// Examples:
 
-//subString
+// arraySubstring(["hello", "history", "helix", "hellos"],"hel")
+// => [true, false, true, true]
+// arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre")
+// => [true, false, false, true] 
 
-const str = 'hello", "history", "helix", "hellos';
+function arraySubString(word, str){
 
-console.log(str.substring(1));
+    let result= [];
+    for(let i = 0; i < str.length; i++)
 
-console.log(str.substring(2));
+    if(str.length <=2 )
 
-console.log(str.substring(3));
+
+
+}
+console.log(arraySubString(["hell", "history", "helix", "hellos"], "hel"))
